@@ -17,14 +17,20 @@ const fetchShow = () => {
       console.error(error);
     })
     .finally(() => {
-      apiData[0].map((obj) => cardsCreate(obj));
+      apiData[0].map((obj) => cards(obj));
     });
 };
+7;
 
-const cardsCreate = (data) => {
+const cards = (data) => {
   section.innerHTML += `
     <figure> 
     <img src=${data.image.medium} alt=${data.name}>
+    <h2>${data.name}</h2>
+    <p>${data.genres}</p>
+    <p>${data.runtime} min</p>
+    <p>${data.rating.average}</p> 
+
     </figure>
   `;
 };

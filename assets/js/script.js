@@ -24,13 +24,13 @@ const fetchShow = () => {
 
 const cards = (data) => {
   section.innerHTML += `
-    <figure class"cards">
+    <figure class="cards">
     <div class="container"> 
       <img class="imgCards" class src=${data.image.medium} alt=${data.name}>
       <h2 class="title">${data.name}</h2>
       <p class="genres">${data.genres}</p>
       <p class="runtime">${data.runtime} min</p>
-      <p class="rating">${data.rating.average}</p> 
+      <p class="rating">${data.rating.average}<span class="star">⭐️</span></p>
     </div>
     </figure>
   `;

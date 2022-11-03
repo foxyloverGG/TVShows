@@ -4,6 +4,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Josefin Sans", sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -18,10 +19,10 @@ header {
   text-align: center;
   padding-top: 15px;
   background-color: #060433;
+  position: fixed;
 }
 header h1 {
   font-size: 50px;
-  padding-top: 20px;
   background: linear-gradient(#743ad5, #d53a9d);
   -webkit-background-clip: text;
           background-clip: text;
@@ -29,8 +30,7 @@ header h1 {
 }
 header nav {
   width: 100%;
-  padding: 35px;
-  height: 12vh;
+  padding: 20px 50px;
   border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
   border-bottom: 5px solid;
   border-image-slice: 1;
@@ -67,10 +67,79 @@ header nav ul li a:hover:after {
   width: 100%;
 }
 
+#movies {
+  margin-top: 220px;
+  width: 100%;
+  background-color: r;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  text-align: center;
+}
+
+.cards {
+  margin: 20px;
+}
+.cards .container .imgCards {
+  border: 3px solid;
+  border-width: 3px;
+  border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+  border-image-slice: 1;
+  cursor: pointer;
+}
+.cards .container .title {
+  color: white;
+  padding: 5px;
+  cursor: pointer;
+}
+.cards .container .genres {
+  color: #726EB8;
+  font-size: 18px;
+}
+.cards .container .runtime {
+  color: white;
+  padding-top: 10px;
+}
+.cards .container .rating {
+  font-size: 25px;
+  background: linear-gradient(to left, #743ad5, #d53a9d);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: normal;
+}
+.cards .container .rating .span {
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.to-top {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 15%;
+  right: 1%;
+  font-size: 20px;
+  color: white;
+  background: linear-gradient(to left, #743ad5, #d53a9d);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s ease-out;
+  text-align: center;
+  text-decoration: none;
+  padding-top: 20px;
+}
+
+.to-top:hover {
+  transform: scale(1.25);
+}
+
 footer {
-  position: -webkit-sticky;
-  position: sticky;
-  margin-top: auto;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
   text-align: center;
   background-color: #060433;
   border-image-source: linear-gradient(to left, #743ad5, #d53a9d);

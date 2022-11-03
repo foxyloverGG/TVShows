@@ -1,6 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  background-color: #210263;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #08071c;
+}
+
+header {
+  width: 100%;
+  text-align: center;
+  padding-top: 15px;
+  background-color: #060433;
+}
+header h1 {
+  font-size: 50px;
+  padding-top: 20px;
+  background: linear-gradient(#743ad5, #d53a9d);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+header nav {
+  width: 100%;
+  padding: 35px;
+  height: 12vh;
+  border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+  border-bottom: 5px solid;
+  border-image-slice: 1;
+}
+header nav ul {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 25%;
+}
+header nav ul li {
+  list-style-type: none;
+}
+header nav ul li a {
+  position: relative;
+  text-decoration: none;
+  color: #726EB8;
+  font-size: 30px;
+  transition: 0.3s ease-out;
+}
+header nav ul li a:after {
+  content: "";
+  position: absolute;
+  background: linear-gradient(to left, #743ad5, #d53a9d);
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: -10px;
+  transition: 0.3s ease-out;
+}
+header nav ul li a:hover {
+  color: #D9D7FA;
+}
+header nav ul li a:hover:after {
+  width: 100%;
+}
+
+footer {
+  position: -webkit-sticky;
+  position: sticky;
+  margin-top: auto;
+  text-align: center;
+  background-color: #060433;
+  border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+  border-top: 5px solid;
+  border-image-slice: 1;
+}
+footer ul {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 20px;
+}
+footer ul li {
+  list-style-type: none;
+}
+footer ul li a {
+  text-decoration: none;
+  color: #726EB8;
+  font-size: 20px;
+  transition: 0.3s ease-out;
+}
+footer ul li a:hover {
+  color: #D9D7FA;
+}
+footer .fa {
+  padding: 10px;
+  font-size: 35px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  background: linear-gradient(to left, #743ad5, #d53a9d);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+footer p {
+  padding-bottom: 20px;
+  color: #D9D7FA;
 }/*# sourceMappingURL=styling.css.map */

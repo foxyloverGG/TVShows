@@ -88,6 +88,15 @@ header{
     text-align: center;
 }
 
+.welcome {
+    color: #D9D7FA;
+    position: absolute;
+    width: 100%;
+    margin-top: 15%;
+    text-align: center;
+    font-size: 300px;
+}
+
 .cards {
     margin: 20px;
     
@@ -117,19 +126,34 @@ header{
             padding-top: 10px;
         }
 
+        .rat{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
         .rating{
             font-size: 25px;
             background: linear-gradient(to left, #743ad5, #d53a9d);
             background-clip: text;
             -webkit-text-fill-color: transparent;
             font-weight: normal;
+        }
 
-            .span{
-                -webkit-text-fill-color: transparent;
-                background-clip: text;
-                font-size: 20px;
-                margin-bottom: 10px;
-            }
+        .star{
+            font-size: 20px;
+            padding-bottom: 8px;
+            background: linear-gradient(to left, #743ad5, #d53a9d);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            cursor: pointer;
+            transition: 0.30s ease-out;
+
+        }
+
+        .star:hover{
+            transform: scale(1.20);
         }
     }
 }
@@ -203,6 +227,11 @@ footer {
         background: linear-gradient(to left, #743ad5, #d53a9d);
         background-clip: text;
         -webkit-text-fill-color: transparent;
+        transition: 0.30s ease-out;
+    }
+
+    .fa:hover{
+        transform: scale(1.20);
     }
 
     p{
@@ -210,3 +239,38 @@ footer {
         color: #D9D7FA;
     }
 }
+
+// MOBILE DESIGN 
+
+@media (max-width: 700px) {
+
+    .welcome {
+        margin-top: 55%;
+        font-size: 100px;
+    }
+
+    nav{
+            
+        li{
+            padding: 18px;
+        }
+    }
+
+    #movies {
+
+        display: grid;      
+        grid-template-columns: 1fr;
+    }
+}
+
+
+// // LAPTOP DESIGN 
+
+// @media (max-width: 800px) {
+
+//     #movies {
+
+//         display: grid;      
+//         grid-template-columns: 1fr 1fr 1fr;
+//     }
+// }

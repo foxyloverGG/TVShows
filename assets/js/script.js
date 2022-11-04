@@ -30,7 +30,10 @@ const cards = (data) => {
       <h2 class="title">${data.name}</h2>
       <p class="genres">${data.genres}</p>
       <p class="runtime">${data.runtime} min</p>
-      <p class="rating">${data.rating.average}<span class="star">⭐️</span></p>
+      <div class="rat">
+      <p class="rating">${data.rating.average}</p>
+      <div class="star">⭐️</div>
+      </div>
     </div>
     </figure>
   `;
